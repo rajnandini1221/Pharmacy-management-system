@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/vou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Purchase Report"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:backgroundTint="#00D49B"/>
+
+    <EditText
+        android:id="@+id/vouc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Voucher Number"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:padding="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:textSize="16sp"/>
+
+
+
+    <TextView
+        android:id="@+id/inno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invoice number"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/innno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Invoice number"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="number"/>
+
+    <!-- Customer Number -->
+    <TextView
+        android:id="@+id/purdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Purchase date"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/purchd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Purchase date"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="date"/>
+
+
+    <TextView
+        android:id="@+id/totam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Amount"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/totlamt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Amount"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"/>
+
+
+    <RadioGroup
+        android:id="@+id/paymentStatusGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/paymentPending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Pending" />
+
+        <RadioButton
+            android:id="@+id/paymentDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Done" />
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:backgroundTint="#00D49B"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="32dp"
+        android:padding="18dp"
+        android:textSize="20sp"
+        android:id="@+id/done"/>
+
+</LinearLayout>

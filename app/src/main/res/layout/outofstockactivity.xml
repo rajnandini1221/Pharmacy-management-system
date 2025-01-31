@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/outof"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Out of Stock"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:backgroundTint="#00D49B"/>
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:padding="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:textSize="16sp"/>
+
+
+
+    <TextView
+        android:id="@+id/slno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sl no"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/srlno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Serial no"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="number"
+
+    <!-- Customer Number -->
+    <TextView
+        android:id="@+id/medinout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medicine"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/medinamo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Medicine"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="phone"/>
+
+
+    <TextView
+        android:id="@+id/btc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="batch no"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/outbtch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="batch id"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"/>
+
+
+    <TextView
+        android:id="@+id/doctorgen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generic name"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/generic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="generic"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"/>
+
+
+
+    <TextView
+        android:id="@+id/supplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Supplier"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/medsupp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Supplier"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:backgroundTint="#00D49B"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="32dp"
+        android:padding="18dp"
+        android:textSize="20sp"
+        android:id="@+id/done"/>

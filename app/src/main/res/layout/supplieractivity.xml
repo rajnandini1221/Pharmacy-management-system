@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/mngsupp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage Supplier"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:backgroundTint="#00D49B"/>
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="supplier"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:padding="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:textSize="16sp"/>
+
+
+
+    <TextView
+        android:id="@+id/slno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sl no"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Id"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="number"/>
+
+
+    <!-- Customer Number -->
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Supplier name"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/supname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Supplier name"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="phone"/>
+
+
+    <TextView
+        android:id="@+id/emid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/eml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="textEmailAddress"/>
+
+
+    <TextView
+        android:id="@+id/cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="contact no"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/cntno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="contact no"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"/>
+
+
+
+    <TextView
+        android:id="@+id/supadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Supplier Address"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/suppaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Supplier Address"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:backgroundTint="#00D49B"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="32dp"
+        android:padding="18dp"
+        android:textSize="20sp"
+        android:id="@+id/done"/>
+
+</LinearLayout>
