@@ -46,4 +46,9 @@
         android:textSize="20sp"
         android:id="@+id/button"/>
 
+    <ListView
+        android:id="@+id/customer_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
 </LinearLayout>

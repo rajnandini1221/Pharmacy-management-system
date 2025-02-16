@@ -9,30 +9,18 @@
         android:id="@+id/vou"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Voucher Number"
+        android:text="Sale Report"
         android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
         android:padding="10dp"
-        android:backgroundTint="#00D49B"/>
-
-    <EditText
-        android:id="@+id/vouc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Voucher Number"
-        android:drawableLeft="@android:drawable/ic_menu_search"
-        android:padding="8dp"
-        android:background="@android:drawable/editbox_background"
-        android:textSize="16sp"/>
-
-
+        android:background="#00D49B"
+        android:textColor="@color/white"/>
 
     <TextView
-        android:id="@+id/inno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Invoice number"
+        android:text="Invoice Number"
         android:textSize="16sp"
         android:textColor="#000000"
         android:layout_marginBottom="4dp"/>
@@ -41,18 +29,16 @@
         android:id="@+id/innno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Invoice number"
+        android:hint="Invoice Number"
         android:textSize="14sp"
         android:padding="10dp"
         android:layout_marginBottom="16dp"
-        android:inputType="number">
+        android:inputType="number"/>
 
-    <!-- Customer Number -->
     <TextView
-        android:id="@+id/saldt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sale date"
+        android:text="Sale Date"
         android:textSize="16sp"
         android:textColor="#000000"
         android:layout_marginBottom="4dp"/>
@@ -61,15 +47,15 @@
         android:id="@+id/saled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Sale date"
+        android:hint="Select Sale Date"
         android:textSize="14sp"
         android:padding="10dp"
         android:layout_marginBottom="16dp"
-        android:inputType="date"/>
-
+        android:focusable="false"
+        android:clickable="true"
+        android:onClick="openDatePicker"/>
 
     <TextView
-        android:id="@+id/totam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Amount"
@@ -84,8 +70,8 @@
         android:hint="Total Amount"
         android:textSize="14sp"
         android:padding="10dp"
-        android:layout_marginBottom="16dp"/>
-
+        android:layout_marginBottom="16dp"
+        android:inputType="numberDecimal"/>
 
     <RadioGroup
         android:id="@+id/paymentStatusGroup"
@@ -105,8 +91,8 @@
             android:text="Payment Done" />
     </RadioGroup>
 
-
     <Button
+        android:id="@+id/done"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
@@ -114,7 +100,12 @@
         android:textColor="@android:color/white"
         android:layout_marginTop="32dp"
         android:padding="18dp"
-        android:textSize="20sp"
-        android:id="@+id/done"/>
+        android:textSize="20sp"/>
+
+    <ListView
+        android:id="@+id/saleListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>

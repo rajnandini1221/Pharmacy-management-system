@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,29 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Last"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
 
-        </activity>
-        <activity
-            android:name=".Login"
+        <!-- Splash Screen Activity -->
+        <activity android:name=".splashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Login Activity -->
         <activity android:name=".Login"
-            android:exported="true"
-            tools:ignore="DuplicateActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
 
+        <!-- Other Activities -->
+        <activity android:name=".MainActivity" />
         <activity android:name=".home" />
         <activity android:name=".TotalCustomersActivity" />
         <activity android:name=".MedicineActivity" />
@@ -44,7 +35,6 @@
         <activity android:name=".PurchaseReportActivity" />
         <activity android:name=".SaleReportActivity" />
         <activity android:name=".OutOfStockActivity" />
-
 
     </application>
 

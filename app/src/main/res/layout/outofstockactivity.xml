@@ -14,107 +14,45 @@
         android:textStyle="bold"
         android:gravity="center"
         android:padding="10dp"
-        android:backgroundTint="#00D49B"/>
-
-    <EditText
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Search"
-        android:drawableLeft="@android:drawable/ic_menu_search"
-        android:padding="8dp"
-        android:background="@android:drawable/editbox_background"
-        android:textSize="16sp"/>
-
-
-
-    <TextView
-        android:id="@+id/slno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sl no"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:layout_marginBottom="4dp"/>
+        android:background="#00D49B"
+        android:textColor="@android:color/white"/>
 
     <EditText
         android:id="@+id/srlno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Serial no"
+        android:hint="Serial No"
         android:textSize="14sp"
         android:padding="10dp"
-        android:layout_marginBottom="16dp"
-        android:inputType="number"
-
-    <!-- Customer Number -->
-    <TextView
-        android:id="@+id/medinout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medicine"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:layout_marginBottom="4dp"/>
+        android:layout_marginBottom="8dp"
+        android:inputType="number"/>
 
     <EditText
         android:id="@+id/medinamo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Medicine"
+        android:hint="Medicine Name"
         android:textSize="14sp"
         android:padding="10dp"
-        android:layout_marginBottom="16dp"
-        android:inputType="phone"/>
-
-
-    <TextView
-        android:id="@+id/btc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="batch no"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:layout_marginBottom="4dp"/>
+        android:layout_marginBottom="8dp"/>
 
     <EditText
         android:id="@+id/outbtch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="batch id"
+        android:hint="Batch No"
         android:textSize="14sp"
         android:padding="10dp"
-        android:layout_marginBottom="16dp"/>
-
-
-    <TextView
-        android:id="@+id/doctorgen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Generic name"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:layout_marginBottom="4dp"/>
+        android:layout_marginBottom="8dp"/>
 
     <EditText
         android:id="@+id/generic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="generic"
+        android:hint="Generic Name"
         android:textSize="14sp"
         android:padding="10dp"
-        android:layout_marginBottom="16dp"/>
-
-
-
-    <TextView
-        android:id="@+id/supplier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Supplier"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:layout_marginBottom="4dp"/>
+        android:layout_marginBottom="8dp"/>
 
     <EditText
         android:id="@+id/medsupp"
@@ -123,15 +61,22 @@
         android:hint="Supplier"
         android:textSize="14sp"
         android:padding="10dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="8dp"/>
 
     <Button
+        android:id="@+id/done"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
         android:backgroundTint="#00D49B"
         android:textColor="@android:color/white"
-        android:layout_marginTop="32dp"
-        android:padding="18dp"
-        android:textSize="20sp"
-        android:id="@+id/done"/>
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:textSize="18sp"/>
+
+    <ListView
+        android:id="@+id/outOfStockListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

@@ -1,40 +1,49 @@
 package com.example.last;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.ArrayList;
 
 public class SupplierActivity extends AppCompatActivity {
 
-    private EditText searchBar, supplierId, supplierName, email, contactNo, supplierAddress;
+    private EditText supplierId, supplierName, email, contactNo, supplierAddress;
     private Button submitButton;
+    private ListView supplierListView;
+    private SupplierDatabaseHelper dbHelper;
+    private ArrayAdapter<String> adapter;
+    private ArrayList<String> supplierList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.medicineactivity);
+        setContentView(R.layout.supplieractivity);
 
         // Initialize UI elements
-        searchBar = findViewById(R.id.search_bar);
         supplierId = findViewById(R.id.id);
         supplierName = findViewById(R.id.supname);
         email = findViewById(R.id.eml);
         contactNo = findViewById(R.id.cntno);
         supplierAddress = findViewById(R.id.suppaddress);
         submitButton = findViewById(R.id.done);
+        supplierListView = findViewById(R.id.supplier_list);
 
-        // Set onClickListener for the Submit button
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                handleSubmit();
-            }
-        });
+        // Initialize Database Helper
+        dbHelper = new SupplierDatabaseHelper(this);
+
+        // Load Supplier Data
+        supplierList = new ArrayList<>();
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, supplierList);
+        supplierListView.setAdapter(adapter);
+        loadSupplierData();
+
+        // Submit Button Click Listener
+        submitButton.setOnClickListener(v -> handleSubmit());
     }
 
     private void handleSubmit() {
@@ -60,7 +69,27 @@ public class SupplierActivity extends AppCompatActivity {
             return;
         }
 
-        // Process the data (e.g., store in database or send to server)
-        Toast.makeText(this, "Supplier details submitted successfully!", Toast.LENGTH_LONG).show();
+        dbHelper.insertSupplier(id, name, emailText, contact, address);
+        Toast.makeText(this, "Supplier added successfully!", Toast.LENGTH_LONG).show();
+
+        loadSupplierData();
+    }
+
+    private void loadSupplierData() {
+        supplierList.clear();
+        Cursor cursor = dbHelper.getAllSuppliers();
+
+        if (cursor.moveToFirst()) {
+            do {
+                String data = "ID: " + cursor.getString(0) + "\n"
+                        + "Name: " + cursor.getString(1) + "\n"
+                        + "Email: " + cursor.getString(2) + "\n"
+                        + "Contact: " + cursor.getString(3) + "\n"
+                        + "Address: " + cursor.getString(4);
+                supplierList.add(data);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        adapter.notifyDataSetChanged();
     }
 }

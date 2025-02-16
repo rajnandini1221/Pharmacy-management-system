@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,11 +23,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         button.setOnClickListener(this);
     }
 
-    @Override
     public void onClick(View v) {
-        if (button.getId() == v.getId()) {
-            Intent intent = new Intent(this,home.class);
+        String user = username.getText().toString().trim();
+        String pass = password.getText().toString().trim();
+
+        if (user.isEmpty() || pass.isEmpty()) {
+            Toast.makeText(this, "Please enter username and password", Toast.LENGTH_SHORT).show();
+        } else if (user.equals("admin") && pass.equals("1234")) { // Example hardcoded credentials
+            Intent intent = new Intent(this, home.class);
             startActivity(intent);
+        } else {
+            Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show();
         }
     }
 }
